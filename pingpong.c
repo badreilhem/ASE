@@ -13,6 +13,7 @@ int main(int argc, char *argv[])
 {
   init_ctx(&ctx_ping, 16384, f_ping, NULL);
   init_ctx(&ctx_pong, 16384, f_pong, NULL);
+  init_ctx(&ctx_pung, 16384, f_pung, NULL);	
   switch_to_ctx(&ctx_ping);
   
   exit(EXIT_SUCCESS);
@@ -48,4 +49,4 @@ void f_pung(void *args)
     printf("*beta*") ;
     switch_to_ctx(&ctx_ping);
   }
-} 
+}  
